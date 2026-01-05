@@ -105,7 +105,7 @@ export default function Preloader({ onComplete }: any) {
                 {/* <span className="text-3xl font-bold font-mono text-green-500 tracking-widest">
                             {progress}%
                         </span> */}
-                <span className="text-3xl font-bold text-green-500 tracking-widest">
+                <span className="text-3xl font-bold font-serif text-green-500 tracking-widest">
                   The Heart of Nigeria
                 </span>
                 <span className="text-xs text-gray-500 uppercase tracking-[0.3em]">

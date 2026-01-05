@@ -4,7 +4,7 @@ import { ImageResponse } from 'next/og';
 export const runtime = 'edge';
 
 // Image metadata
-export const alt = 'Visit Arewa | The Soul of Northern Nigeria';
+export const alt = 'Visit Arewa | The Heart of Nigeria';
 export const size = {
   width: 1200,
   height: 630,
@@ -88,7 +88,7 @@ export default async function Image() {
             fontWeight: 600,
           }}
         >
-          The Soul of Northern Nigeria
+          The Heart of Nigeria
         </div>
 
         {/* Footer / Branding */}
@@ -105,7 +105,7 @@ export default async function Image() {
         >
             <span>Powered by Veyrix Technologies</span>
             <div style={{ width: 6, height: 6, backgroundColor: '#22c55e', borderRadius: '50%' }} />
-            <span>Gombe</span>
+            <span>Abuja, Nigeria</span>
         </div>
       </div>
     ),

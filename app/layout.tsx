@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Visit Arewa | The Soul of Northern Nigeria",
+  title: "Visit Arewa | The Heart of Nigeria",
   description:
     "Discover the breathtaking landscapes, rich heritage, and vibrant culture of Northern Nigeria. From the ancient walls of Kano to the rolling hills of Mambilla, experience the true spirit of Arewa.",
   keywords: [
@@ -29,9 +29,9 @@ export const metadata: Metadata = {
     "Abuja",
     "Gombe",
   ],
-  authors: [{ name: "Veyrix Technologies", url: "https://veyrixtech.com" }],
+  authors: [{ name: "Veyrix Technologies Ltd", url: "https://veyrixtech.com" }],
   openGraph: {
-    title: "Visit Arewa | The Soul of Northern Nigeria",
+    title: "Visit Arewa | The Heart of Nigeria",
     description:
       "A digital archive showcasing the beauty, talent, and heritage of Northern Nigeria.",
     url: "https://visitarewa.com", // Replace with your actual domain when deployed
