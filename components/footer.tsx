@@ -27,7 +27,13 @@ export default function Footer() {
           {/* BRAND */}
           <div className="space-y-6">
             <div className="flex items-center gap-3">
-              <Image src="/logo-g.svg" className="w-24" alt="Visit Arewa Logo" width={96} height={40} />
+              <Image
+                src="/logo-g.svg"
+                className="w-24"
+                alt="Visit Arewa Logo"
+                width={96}
+                height={40}
+              />
             </div>
             <p className="text-gray-400 text-sm leading-relaxed">
               Showcasing the beauty, talent, and heritage of Northern Nigeria to
@@ -121,6 +127,8 @@ export default function Footer() {
           <p>
             &copy; 2026 Arewa Showcase. Made by{" "}
             <a
+              target="_blank"
+              rel="noopener noreferrer"
               href="https://veyrixtech.com/"
               className="text-green-500 hover:text-green-500 font-bold transition-colors"
             >
