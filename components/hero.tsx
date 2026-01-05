@@ -77,7 +77,7 @@ export default function HeroSection() {
       setIsSearchOpen(false); // Close modal
       setSearchQuery(""); // Reset text
     } else {
-      alert("Destination not found! Try 'Abuja' or 'Yankari'");
+      alert("Destination will be added soon! Try 'Abuja' or 'Yankari'");
     }
   };
 
@@ -150,13 +150,13 @@ export default function HeroSection() {
 
           {/* Other Links */}
           <a href="#people" className="hover:text-green-400 transition">
-            People
+            People & Icons
           </a>
           <a href="#cuisine" className="hover:text-green-400 transition">
             Cuisine
           </a>
           <a href="#events" className="hover:text-green-400 transition">
-            Events
+            Events 2026
           </a>
         </div>
 
@@ -225,36 +225,47 @@ export default function HeroSection() {
             animate={{ x: 0 }}
             exit={{ x: "100%" }}
             transition={{ type: "tween", duration: 0.3 }}
-            className="fixed inset-0 z-[60] bg-black/95 backdrop-blur-lg flex flex-col items-center justify-center space-y-8 md:hidden"
+            className="fixed inset-0 z-[999] bg-black/95 backdrop-blur-xl flex flex-col items-center justify-center space-y-8 md:hidden"
           >
+            {/* Close Button */}
             <button
               onClick={() => setIsMenuOpen(false)}
-              className="absolute top-8 right-8 p-2 rounded-full hover:bg-white/10"
+              className="absolute top-8 right-8 p-2 rounded-full text-white hover:bg-white/10 transition-colors"
             >
               <X size={32} />
             </button>
 
-            <a
-              href="#"
-              className="text-3xl font-bold hover:text-green-500 transition"
-            >
-              News
-            </a>
-            <a href="#" className="text-3xl font-bold text-green-500">
-              Destinations
-            </a>
-            <a
-              href="#"
-              className="text-3xl font-bold hover:text-green-500 transition"
-            >
-              Blog
-            </a>
-            <a
-              href="#"
-              className="text-3xl font-bold hover:text-green-500 transition"
-            >
-              Contact
-            </a>
+            {/* Navigation Links */}
+            <nav className="flex flex-col items-center space-y-8 text-center">
+              <a
+                href="#destinations"
+                onClick={() => setIsMenuOpen(false)}
+                className="text-3xl font-bold text-white hover:text-green-500 transition-colors duration-300"
+              >
+                Destinations
+              </a>
+              <a
+                href="#people"
+                onClick={() => setIsMenuOpen(false)}
+                className="text-3xl font-bold text-white hover:text-green-500 transition-colors duration-300"
+              >
+                People & Icons
+              </a>
+              <a
+                href="#cuisine"
+                onClick={() => setIsMenuOpen(false)}
+                className="text-3xl font-bold text-white hover:text-green-500 transition-colors duration-300"
+              >
+                Culinary Guide
+              </a>
+              <a
+                href="#events"
+                onClick={() => setIsMenuOpen(false)}
+                className="text-3xl font-bold text-white hover:text-green-500 transition-colors duration-300"
+              >
+                Events 2026
+              </a>
+            </nav>
           </motion.div>
         )}
       </AnimatePresence>

@@ -13,46 +13,49 @@ import HeroSection from "@/components/hero";
 export default function App() {
   const [loading, setLoading] = useState(true);
 
-  return (
-    <main className="bg-black w-full min-h-screen cursor-default">
-      {/* 1. Show Preloader if loading is true */}
+ return (
+    <main className="bg-black w-full min-h-screen text-white selection:bg-green-500 selection:text-black">
+      
+      {/* 1. THE PRELOADER (Runs once on refresh) */}
       <AnimatePresence mode="wait">
         {loading && (
-          <motion.div
-            key="preloader"
-            exit={{ opacity: 0, transition: { duration: 0.5 } }}
-          >
-            <Preloader onComplete={() => setLoading(false)} />
-          </motion.div>
+           <motion.div key="preloader" exit={{ opacity: 0, transition: { duration: 0.5 } }}>
+             <Preloader onComplete={() => setLoading(false)} />
+           </motion.div>
         )}
       </AnimatePresence>
 
-      {/* 2. Show Site Content only after loading is false */}
+      {/* 2. THE MAIN SITE (Revealed after loading) */}
       {!loading && (
-        <motion.div
+        <motion.div 
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
-        >
-          <section id="destinations" className="relative z-10">
+        >          
+
+          {/* SECTION 1: HERO & DESTINATIONS */}
+          <section id="destinations">
             <HeroSection />
           </section>
 
-          <Manifesto />
-
-          <section id="people" className="relative z-10">
+          {/* SECTION 2: PEOPLE & TALENT */}
+          <section id="people">
             <ArewaTalent />
           </section>
 
-          <section id="cuisine" className="relative z-10">
+          {/* SECTION 3: FOOD & CUISINE */}
+          <section id="cuisine">
             <ArewaCuisine />
           </section>
 
-          <section id="events" className="relative z-10">
+          {/* SECTION 4: EVENTS & VIDEOS */}
+          <section id="events">
             <ArewaEvents />
           </section>
 
+          {/* FOOTER */}
           <Footer />
+
         </motion.div>
       )}
     </main>
