@@ -42,7 +42,7 @@ export default function PeoplePage() {
         </Link>
 
         <div className="max-w-4xl">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 font-serif">
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 font-serif text-green-500">
             Arewa Talent
           </h1>
           <p className="text-xl text-gray-300">
@@ -67,7 +67,7 @@ export default function PeoplePage() {
               {groupedPeople[category].map((person) => (
                 <Link key={person.slug} href={`/people/${person.slug}`}>
                   <div className="group cursor-pointer">
-                    <div className="relative h-[400px] rounded-2xl overflow-hidden mb-4 grayscale group-hover:grayscale-0 transition-all duration-300">
+                    <div className="relative h-[400px] rounded-2xl overflow-hidden mb-4  group-hover:transition-all duration-300">
                       <Image
                         src={person.image}
                         alt={person.name}
@@ -76,7 +76,7 @@ export default function PeoplePage() {
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
                       <div className="absolute bottom-0 inset-x-0 p-6">
-                        <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-green-400 transition-colors">
+                        <h3 className="text-2xl font-bold mb-2 text-green-400 group-hover:transition-colors">
                           {person.name}
                         </h3>
                         <p className="text-gray-300 text-sm">{person.role}</p>

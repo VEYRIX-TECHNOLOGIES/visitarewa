@@ -357,41 +357,95 @@ export const people = [
     }
 ];
 
+
 export const dishes = [
     {
-        id: "suya",
+        id: 1,
+        slug: "suya",
         name: "Spicy Kilishi & Suya",
         tagline: "The Taste of Fire",
-        description:
-            "Thinly sliced beef, sun-dried and coated in a fiery blend of peppers, ginger, and ground peanuts (Kuli-kuli). It is not just a snack; it is a rite of passage.",
+        description: "Thinly sliced beef, sun-dried and coated in a fiery blend of peppers, ginger, and ground peanuts (Kuli-kuli). It is not just a snack; it is a rite of passage.",
+        quote: "Suya is not just eaten; it is experienced. The spice hits you first, then the smoke, then the memories of vibrant Arewa nights.",
         image: "/images/suya.jpg",
+        video: "https://www.youtube.com/watch?v=F-P0t3YubII", // ✅ Added Video
+        category: "Street Food",
+        calories: "350 kcal",
         stats: ["Spicy", "Smoky", "Street Food"],
+        ingredients: [
+            "Thinly sliced Beef",
+            "Kuli-Kuli (Groundnut Cake)",
+            "Ginger Powder",
+            "Garlic Powder",
+            "Dried Cayenne Pepper",
+            "Vegetable Oil",
+            "Salt & Seasoning"
+        ]
     },
     {
-        id: "tuwo",
+        id: 2,
+        slug: "tuwo",
         name: "Tuwo Shinkafa & Miyan Taushe",
         tagline: "The Soul of the Home",
-        description:
-            "Soft, mashed rice served with a rich, dark green soup made from powdered baobab leaves. A comfort food that has nourished generations.",
+        description: "Soft, mashed rice served with a rich pumpkin and spinach soup. A comfort food that has nourished generations.",
+        quote: "When the Tuwo is soft and the soup is rich, even a stranger feels at home. It is the ultimate symbol of Northern hospitality.",
         image: "/images/tuwo.jpg",
+        video: "https://www.youtube.com/watch?v=XCNacLN9pY0", // ✅ Added Video
+        category: "Main Dish",
+        calories: "450 kcal",
         stats: ["Traditional", "Hearty", "Dinner"],
+        ingredients: [
+            "Soft Rice (Tuwo Rice)",
+            "Ripe Pumpkin (Kabewa)",
+            "Fresh Spinach (Alayahu)",
+            "Groundnuts (Peanut Butter)",
+            "Beef or Goat Meat",
+            "Palm Oil",
+            "Sorrel Seeds (Yakuwa)",
+            "Locust Beans (Dawadawa)"
+        ]
     },
     {
-        id: "fura",
+        id: 3,
+        slug: "fura",
         name: "Fura da Nono",
         tagline: "The Savannah's Nectar",
-        description:
-            "A refreshing blend of fermented milk (Nono) and millet dough balls (Fura), often spiced with ginger and cloves. The ultimate drink for the hot afternoon sun.",
+        description: "A refreshing blend of fermented milk (Nono) and millet dough balls (Fura), often spiced with ginger and cloves. The ultimate drink for the hot afternoon sun.",
+        quote: "Cool as the evening breeze, rich as our heritage. A drink crafted by hands that know the ancient rhythm of the calabash.",
         image: "/images/fura.png",
+        video: "https://www.youtube.com/watch?v=BEuHsh0Uh6A", // ✅ Added Video
+        category: "Drink",
+        calories: "180 kcal",
         stats: ["Refreshing", "Dairy", "Sweet"],
+        ingredients: [
+            "Millet Flour",
+            "Fermented Cow Milk (Nono)",
+            "Ginger Cloves",
+            "Dried Chili Pepper",
+            "Sugar",
+            "Water",
+            "Calabash (for serving)"
+        ]
     },
     {
-        id: "waina",
+        id: 4,
+        slug: "waina",
         name: "Masa (Waina)",
         tagline: "The Morning Delight",
-        description:
-            "Fermented rice cakes fried to golden perfection. Crisp on the outside, sour and soft on the inside, best served with Yaji or vegetable soup.",
+        description: "Fermented rice cakes fried to golden perfection. Crisp on the outside, sour and soft on the inside, best served with Yaji or vegetable soup.",
+        quote: "Golden pockets of joy that melt in your mouth. A morning without Masa is like a sky without the sun—incomplete.",
         image: "/images/masa.jpg",
+        video: "https://www.youtube.com/watch?v=yt7upym4gDM", // ✅ Added Video
+        category: "Breakfast",
+        calories: "200 kcal",
         stats: ["Breakfast", "Fermented", "Soft"],
+        ingredients: [
+            "White Rice (soaked overnight)",
+            "Yeast",
+            "Sugar",
+            "Potash (Kanwa)",
+            "Vegetable Oil",
+            "Onions",
+            "Yaji (Suya Spice)"
+        ]
     },
 ];
