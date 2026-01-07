@@ -36,7 +36,7 @@ export default async function EventPage({ params }: any) {
   }
 
   return (
-    <main className="bg-[#020402] min-h-screen text-white font-serif selection:bg-green-500 selection:text-black">
+    <main className="bg-[#020402] min-h-screen text-white font-sans selection:bg-green-500 selection:text-black">
       {/* --- HERO SECTION --- */}
       <div className="relative h-[60vh] w-full overflow-hidden">
         <div className="relative w-full h-full">
@@ -57,7 +57,7 @@ export default async function EventPage({ params }: any) {
         {/* Navigation & Title */}
         <div className="absolute inset-0 flex flex-col justify-between p-6 md:p-20 z-20">
           <Link
-            href="/#events"
+            href="/events"
             className="w-fit flex items-center gap-2 bg-black/40 backdrop-blur-md px-4 py-2 rounded-full hover:bg-green-500 hover:text-black transition-colors border border-white/10"
           >
             <ArrowLeft size={18} />
@@ -77,7 +77,7 @@ export default async function EventPage({ params }: any) {
               </div>
             </div>
 
-            <h1 className="text-4xl md:text-7xl font-black tracking-tighter leading-none text-white drop-shadow-xl">
+            <h1 className="text-4xl font-serif md:text-7xl font-black tracking-tighter leading-none text-white drop-shadow-xl">
               {event.name}
             </h1>
           </div>

@@ -96,9 +96,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      {/* 3. ADD THE VARIABLE TO THE BODY CLASSNAME 👇 */}
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${playfair.variable} font-serif antialiased`}
+        className={`${geistMono.variable} ${playfair.variable} antialiased`}
       >
         {children}
         <Analytics />

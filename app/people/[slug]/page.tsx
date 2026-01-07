@@ -51,7 +51,7 @@ export default async function PersonPage({ params }: any) {
   };
 
   return (
-    <main className="bg-[#020402] min-h-screen text-white font-serif selection:bg-green-500 selection:text-black">
+    <main className="bg-[#020402] min-h-screen text-white font-sans selection:bg-green-500 selection:text-black">
       {/* --- HERO SECTION --- */}
       <div className="relative h-[60vh] w-full overflow-hidden">
         <div className="relative w-full h-full">
@@ -90,7 +90,7 @@ export default async function PersonPage({ params }: any) {
               </div>
             </div>
 
-            <h1 className="text-4xl md:text-7xl font-black tracking-tighter leading-none text-white drop-shadow-xl">
+            <h1 className="text-4xl md:text-7xl font-black tracking-tighter leading-none text-white font-serif drop-shadow-xl">
               {person.name}
             </h1>
 
@@ -277,3 +277,4 @@ export default async function PersonPage({ params }: any) {
     </main>
   );
 }
+

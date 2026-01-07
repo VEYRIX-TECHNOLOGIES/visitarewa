@@ -31,7 +31,7 @@ export default function ArewaCuisine() {
               <div
                 key={dish.id}
                 onClick={() => setActiveDish(dish)}
-                className={`group cursor-pointer p-6 rounded-xl transition-all duration-300 border ${
+                className={`group cursor-pointer p-6 rounded-xl transition-all font-sans duration-300 border ${
                   activeDish.id === dish.id
                     ? "bg-white/5 border-green-500"
                     : "bg-transparent border-transparent hover:bg-white/5"
@@ -82,7 +82,7 @@ export default function ArewaCuisine() {
           <div>
             <Link 
               href="/food"
-              className="inline-flex items-center gap-2 px-8 py-3 rounded-full bg-white/5 hover:bg-green-500 hover:text-black border border-white/10 transition-all font-bold text-sm uppercase tracking-wider"
+              className="inline-flex items-center gap-2 px-8 py-3 rounded-full bg-white/5 hover:bg-green-500 hover:text-black   transition-all font-bold font-sans  uppercase tracking-wider"
             >
               Explore Full Menu <ArrowRight size={16} />
             </Link>
@@ -111,7 +111,7 @@ export default function ArewaCuisine() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
 
               {/* Floating Badge */}
-              <div className="absolute bottom-8 left-1/2 -translate-x-1/2 bg-white/10 backdrop-blur-md border border-white/20 px-6 py-3 rounded-full flex gap-4 w-max">
+              <div className="absolute bottom-8 left-1/2 -translate-x-1/2 bg-white/10 font-sans backdrop-blur-md border border-white/20 px-6 py-3 rounded-full flex gap-4 w-max">
                 {activeDish.stats.map((stat, i) => (
                   <span
                     key={i}

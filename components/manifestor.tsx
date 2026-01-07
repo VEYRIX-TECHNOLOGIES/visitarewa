@@ -43,7 +43,7 @@ export default function Manifesto() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="mt-12 text-gray-500 text-lg max-w-2xl mx-auto font-serif"
+          className="mt-12 text-gray-500 text-lg max-w-2xl mx-auto font-sans"
         >
           From the Zuma Rock to the Mambilla Plateau, we are defined by our
           land. But our true strength lies in our people—the creators, the

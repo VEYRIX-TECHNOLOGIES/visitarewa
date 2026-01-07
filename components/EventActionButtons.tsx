@@ -1,8 +1,9 @@
 "use client";
 
 import React, { useState } from "react";
-import { Share2, Play, X, Bell } from "lucide-react";
+import { Share2, Play, X, Bell, ArrowRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import Link from "next/link";
 
 export default function EventActionButtons({ videoUrl }: { videoUrl?: string }) {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
@@ -31,14 +32,15 @@ export default function EventActionButtons({ videoUrl }: { videoUrl?: string }) 
         )}
 
         {/* 2. Reminder Button */}
-        <button className="w-full bg-white text-black font-bold py-4 rounded-xl hover:bg-gray-200 transition-colors flex items-center justify-center gap-2">
-            <Bell size={20} /> Set Reminder
-        </button>
+        <Link href={'/events'} className="w-full bg-white text-black font-bold py-4 rounded-xl hover:bg-gray-200 transition-colors flex items-center justify-center gap-2">
+            View All Events  <ArrowRight size={20} />
+        </Link>
 
         {/* 3. Share Button */}
-        <button className="w-full bg-transparent border border-white/20 text-white font-bold py-4 rounded-xl hover:bg-white/10 transition-colors flex items-center justify-center gap-2">
+        {/* <button className="w-full bg-transparent border border-white/20 text-white font-bold py-4 rounded-xl hover:bg-white/10 transition-colors flex items-center justify-center gap-2">
           <Share2 size={20} /> Share Event
         </button>
+       */}
       </div>
 
       {/* --- VIDEO MODAL --- */}

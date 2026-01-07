@@ -30,7 +30,7 @@ export default function PeoplePage() {
   const categories = Object.keys(groupedPeople).sort();
 
   return (
-    <main className="bg-[#020402] min-h-screen text-white font-serif selection:bg-green-500 selection:text-black">
+    <main className="bg-[#020402] min-h-screen text-white font-sans selection:bg-green-500 selection:text-black">
       {/* Hero Section */}
       <div className="relative py-20 px-6 md:px-20 border-b border-white/10">
         <Link
@@ -53,13 +53,13 @@ export default function PeoplePage() {
       </div>
 
       {/* Categories Section */}
-      <div className="container mx-auto px-6 md:px-20 py-20 font-serif">
+      <div className="container mx-auto px-6 md:px-20 py-20 font-sans">
         {categories.map((category) => (
           <div key={category} className="mb-20">
             {/* Category Header */}
             <div className="flex items-center gap-4 mb-12">
               <div className="h-[2px] w-12 bg-green-500"></div>
-              <h2 className="text-3xl md:text-4xl font-bold">{category}</h2>
+              <h2 className="text-3xl md:text-4xl font-serif font-bold">{category}</h2>
             </div>
 
             {/* People Grid */}

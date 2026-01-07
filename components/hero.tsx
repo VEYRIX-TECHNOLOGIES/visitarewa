@@ -86,7 +86,7 @@ export default function HeroSection() {
   const activeDest = destinations[currentIndex];
 
   return (
-    <div className="relative w-full h-screen overflow-hidden bg-black text-white font-serif">
+    <div className="relative w-full h-screen overflow-hidden bg-black text-white font-sans">
       {/* Background Image */}
       <AnimatePresence mode="popLayout">
         <motion.div
@@ -372,7 +372,7 @@ export default function HeroSection() {
             0{currentIndex + 1} <span className="mx-2 text-gray-600">/</span> 0
             {destinations.length}
           </div>
-          <div className="flex gap-4">
+          <div className="flex gap-4 lg:hidden">
             <button
               onClick={handlePrev}
               className="p-2 border border-white/20 rounded-full hover:bg-white hover:text-black transition"

@@ -12,7 +12,7 @@ import {
 
 export default function Footer() {
   return (
-    <footer className="relative bg-[#020402] text-white pt-32 pb-0 overflow-hidden font-serif border-t border-white/5">
+    <footer className="relative bg-[#020402] text-white pt-32 pb-0 overflow-hidden font-sans border-t border-white/5">
       {/* 1. TOP ACCENT (Neon Line) */}
       <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-green-500 to-transparent shadow-[0_0_10px_#22c55e]"></div>
 
