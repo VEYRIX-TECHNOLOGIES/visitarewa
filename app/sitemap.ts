@@ -1,26 +1,55 @@
 import { MetadataRoute } from 'next'
- 
+import { destinations, events, people, dishes } from '@/lib/data' // Import your data
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://visitarewa.com' 
 
-  return [
+  // 1. Define Static Pages (Main pages)
+  const staticPages = [
     {
       url: baseUrl,
       lastModified: new Date(),
-      changeFrequency: 'weekly',
+      changeFrequency: 'weekly' as const,
       priority: 1,
     },
     {
-      url: `${baseUrl}/#destinations`,
+      url: `${baseUrl}/people`, // The main talent listing page
       lastModified: new Date(),
-      changeFrequency: 'monthly',
+      changeFrequency: 'weekly' as const,
       priority: 0.8,
     },
-    {
-      url: `${baseUrl}/#events`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.9,
-    },
+    // Add /food here if you have created the main food page
+  ]
+
+  // 2. Generate URLs for Destinations
+  const destinationUrls = destinations.map((item) => ({
+    url: `${baseUrl}/destinations/${item.slug}`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly' as const,
+    priority: 0.8,
+  }))
+
+  // 3. Generate URLs for Events
+  const eventUrls = events.map((item) => ({
+    url: `${baseUrl}/events/${item.slug}`,
+    lastModified: new Date(), // Or use specific event date if you want
+    changeFrequency: 'weekly' as const,
+    priority: 0.7,
+  }))
+
+  // 4. Generate URLs for People
+  const peopleUrls = people.map((item) => ({
+    url: `${baseUrl}/people/${item.slug}`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly' as const,
+    priority: 0.7,
+  }))
+
+  // 5. Combine everything into one big list
+  return [
+    ...staticPages,
+    ...destinationUrls,
+    ...eventUrls,
+    ...peopleUrls,
   ]
 }

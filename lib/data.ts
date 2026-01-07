@@ -329,9 +329,9 @@ export const people = [
     },
     {
         id: 7,
-        slug: "usman-haruna",
-        name: "Usman Adamu",
-        title: "USMAN ADAMU HARUNA",
+        slug: "usman-click",
+        name: "Usman Click",
+        title: "USMAN Click",
         role: "SOFTWARE ENGINEER & DESIGNER",
         origin: "Gombe, Nigeria",
         category: "TECHNOLOGY",
@@ -355,4 +355,43 @@ export const people = [
             instagram: "https://www.instagram.com/usmaan_click/"
         }
     }
+];
+
+export const dishes = [
+    {
+        id: "suya",
+        name: "Spicy Kilishi & Suya",
+        tagline: "The Taste of Fire",
+        description:
+            "Thinly sliced beef, sun-dried and coated in a fiery blend of peppers, ginger, and ground peanuts (Kuli-kuli). It is not just a snack; it is a rite of passage.",
+        image: "/images/suya.jpg",
+        stats: ["Spicy", "Smoky", "Street Food"],
+    },
+    {
+        id: "tuwo",
+        name: "Tuwo Shinkafa & Miyan Taushe",
+        tagline: "The Soul of the Home",
+        description:
+            "Soft, mashed rice served with a rich, dark green soup made from powdered baobab leaves. A comfort food that has nourished generations.",
+        image: "/images/tuwo.jpg",
+        stats: ["Traditional", "Hearty", "Dinner"],
+    },
+    {
+        id: "fura",
+        name: "Fura da Nono",
+        tagline: "The Savannah's Nectar",
+        description:
+            "A refreshing blend of fermented milk (Nono) and millet dough balls (Fura), often spiced with ginger and cloves. The ultimate drink for the hot afternoon sun.",
+        image: "/images/fura.png",
+        stats: ["Refreshing", "Dairy", "Sweet"],
+    },
+    {
+        id: "waina",
+        name: "Masa (Waina)",
+        tagline: "The Morning Delight",
+        description:
+            "Fermented rice cakes fried to golden perfection. Crisp on the outside, sour and soft on the inside, best served with Yaji or vegetable soup.",
+        image: "/images/masa.jpg",
+        stats: ["Breakfast", "Fermented", "Soft"],
+    },
 ];
