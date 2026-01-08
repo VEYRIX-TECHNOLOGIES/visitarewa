@@ -1,4 +1,14 @@
 export const destinations = [
+//     {
+//     id: 0,
+//     title: "Visit Arewa",
+//     subtitle: "The Heart of Nigeria",
+//     description: "Journey through ancient emirates, taste the spices of the savannah, and witness festivals that have endured for centuries. Your guide to Northern Nigeria starts here.",
+//     image: "/images/general-hero.jpg", // Use a generic beautiful shot (not just Abuja)
+//     location: "Northern Nigeria",
+//     link: "/about", // Link to an About page or scroll down
+//     cta: "Start the Journey" // Different button text
+//   },
     {
         id: 1,
         slug: "abuja-city",
@@ -53,7 +63,7 @@ export const destinations = [
         shortDescription: "The gem of Taraba, known for its cool climate, lush green rolling hills, and vast tea plantations. It offers some of the most scenic highland views in West Africa.",
         fullDescription: "Home to Chappal Waddi, the highest point in Nigeria, Mambilla Plateau offers a climate unlike anywhere else in West Africa. With rolling green hills, infinite tea plantations, and a temperate climate, it is often called the 'Europe of Nigeria'. Perfect for hiking, camping, and disconnecting from the world.",
         image: "/images/mambilla.jpg",
-        gallery: ["/images/mambilla.jpg", "/images/mambilla.jpg"],
+        gallery: ["/images/mambilla.jpg", "/images/mambilla-2.jpg", "/images/mambilla-3.jpeg", "/images/mambilla-4.jpg","/images/mambilla-5.jpg", "/images/mambilla-6.jpg","/images/mambilla-7.jpg"],
         highlights: ["Highest Peak in Nigeria", "Highland Tea Farms", "Cool Temperate Weather", "Waterfalls"],
         coordinates: "6.9160° N, 11.1750° E"
     }

@@ -264,24 +264,39 @@ export default function HeroSection() {
                 exit={{ y: -50, opacity: 0 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
               >
-                <div className="flex items-center gap-2 text-green-400 mb-2">
-                  <MapPin size={16} />
-                  <span className="uppercase tracking-widest text-xs font-bold">
+                {/* --- NEW: STORYTELLING LABEL --- */}
+                <div className="flex items-center gap-3 mb-4">
+                  {/* The glowing line */}
+                  <span className="h-[2px] w-8 bg-green-500 font-sans shadow-[0_0_10px_rgba(34,197,94,0.8)]"></span>
+
+                  {/* The text with a dark backdrop */}
+                  <span className="relative z-10 text-green-400 font-sans text-[10px] md:text-xs font-black uppercase tracking-[0.25em] bg-black/40 backdrop-blur-md px-4 py-2 rounded-full border border-white/10 shadow-xl">
+                    Destinations Worth Visiting
+                  </span>
+                </div>
+
+                {/* Location Tag (Now Secondary) */}
+                <div className="flex items-center gap-2 text-gray-400 mb-2 pl-1">
+                  <MapPin size={16} className="text-white" />
+                  <span className="uppercase tracking-widest text-xs font-bold text-white">
                     {activeDest.location}
                   </span>
                 </div>
 
-                <h1 className="text-5xl md:text-8xl font-bold font-serif tracking-tighter uppercase leading-none mb-4">
+                {/* Title */}
+                <h1 className="text-5xl md:text-8xl font-bold font-serif tracking-tighter uppercase leading-none mb-6">
                   {activeDest.title}
                 </h1>
 
-                <p className="max-w-md text-gray-200 text-sm md:text-base leading-relaxed line-clamp-3">
+                {/* Description */}
+                <p className="max-w-md text-gray-200 text-sm md:text-base leading-relaxed line-clamp-3 border-l-2 border-white/10 pl-4">
                   {activeDest.shortDescription}
                 </p>
 
+                {/* Button */}
                 <Link href={`/destinations/${destinations[currentIndex].slug}`}>
-                  <button className="bg-green-500 hover:bg-green-400 text-black px-8 py-4 mt-8 rounded-full font-bold flex items-center gap-2 transition-all group">
-                    Explore
+                  <button className="bg-green-500 hover:bg-green-400 text-black px-8 py-4 mt-8 rounded-full font-bold flex items-center gap-2 transition-all group shadow-[0_0_20px_rgba(34,197,94,0.3)] hover:shadow-[0_0_30px_rgba(34,197,94,0.5)]">
+                    Start The Journey
                     <ArrowRight
                       size={18}
                       className="group-hover:translate-x-1 transition-transform"
