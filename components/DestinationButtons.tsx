@@ -1,9 +1,11 @@
-"use client"; // ✅ This marks ONLY this part as Client-side
+"use client";
 
-import React from "react";
-import { Share2, MapPin } from "lucide-react";
+import React, { useState } from "react";
+import { Share2, MapPin, Check } from "lucide-react";
 
 export default function DestinationButtons({ destination, slug }: any) {
+  const [isCopied, setIsCopied] = useState(false);
+
   const handleViewOnMap = () => {
     // Open Google Maps
     const query = encodeURIComponent(
@@ -16,8 +18,8 @@ export default function DestinationButtons({ destination, slug }: any) {
   };
 
   const handleShare = async () => {
-    // Construct the URL
-    const shareUrl = `${window.location.origin}/destinations/${slug}`;
+    // Use the actual current browser URL to be safe
+    const shareUrl = window.location.href;
 
     const shareData = {
       title: destination.title,
@@ -25,15 +27,25 @@ export default function DestinationButtons({ destination, slug }: any) {
       url: shareUrl,
     };
 
+    // 1. Try Native Mobile Share Sheet
     if (navigator.share) {
       try {
         await navigator.share(shareData);
+        return; // If successful, stop here
       } catch (err) {
-        console.log("Error sharing", err);
+        console.log("Share menu closed or failed, falling back to clipboard.");
       }
-    } else {
-      navigator.clipboard.writeText(shareUrl);
-      alert("Link copied to clipboard!");
+    }
+
+    // 2. Fallback: Copy to Clipboard (Desktop)
+    try {
+      await navigator.clipboard.writeText(shareUrl);
+
+      // Visual Feedback: Change button text
+      setIsCopied(true);
+      setTimeout(() => setIsCopied(false), 3000); // Reset after 3 seconds
+    } catch (err) {
+      alert("Browser blocked the copy action. Please copy the URL manually.");
     }
   };
 
@@ -41,16 +53,28 @@ export default function DestinationButtons({ destination, slug }: any) {
     <div className="space-y-4">
       <button
         onClick={handleViewOnMap}
-        className="w-full bg-green-500 text-black font-bold py-4 rounded-xl hover:bg-green-400 transition-colors shadow-[0_0_20px_rgba(34,197,94,0.4)]"
+        className="w-full bg-green-500 text-black font-bold py-4 rounded-xl hover:bg-green-400 transition-colors shadow-[0_0_20px_rgba(34,197,94,0.4)] flex items-center justify-center gap-2"
       >
-        View on Map
+        <MapPin size={20} /> View on Map
       </button>
 
       <button
         onClick={handleShare}
-        className="w-full bg-transparent border border-white/20 text-white font-bold py-4 rounded-xl hover:bg-white/10 transition-colors flex items-center justify-center gap-2"
+        className={`w-full font-bold py-4 rounded-xl transition-all duration-300 flex items-center justify-center gap-2 border ${
+          isCopied
+            ? "bg-white text-black border-white"
+            : "bg-transparent border-white/20 text-white hover:bg-white/10"
+        }`}
       >
-        <Share2 size={18} /> Share Location
+        {isCopied ? (
+          <>
+            <Check size={20} className="text-green-600" /> Link Copied!
+          </>
+        ) : (
+          <>
+            <Share2 size={20} /> Share Location
+          </>
+        )}
       </button>
     </div>
   );
