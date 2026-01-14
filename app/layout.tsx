@@ -14,9 +14,9 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-// 2. CONFIGURE THE SERIF FONT 👇
+// 2. CONFIGURE THE SERIF FONT 
 const playfair = Playfair_Display({
-  variable: "--font-serif", // We name the variable '--font-serif'
+  variable: "--font-serif", 
   subsets: ["latin"],
 });
 
