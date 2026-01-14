@@ -112,5 +112,6 @@ See the `LICENSE` file for details.
 
 **Maintained by:** Veyrix Technologies  
 
+🌐 Website: https://veyrixtech.com  
 📧 Email: devs@veyrixtech.com  
 💻 GitHub: https://github.com/Veyrix-Technologies
