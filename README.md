@@ -15,78 +15,94 @@ It is a living archive—where history, culture, and modern Northern identity ar
 
 ## 🌍 What Visit Arewa Covers
 
-The platform is structured around four core cultural pillars:
+The platform is structured around four cultural pillars:
 
 ### 🗺️ Destinations
-Iconic locations across Northern Nigeria, enriched with galleries, highlights, coordinates, and historical context.
+Landmarks and natural wonders across Northern Nigeria, presented with historical context, visuals, and visitor insight.
 
 Examples:
-- **Abuja** — Capital city, Aso Rock, Zuma Rock  
-- **Yankari Game Reserve** — Wildlife, Wikki Warm Springs  
+- **Abuja** — Capital city, Zuma Rock, Aso Rock  
+- **Yankari Game Reserve** — Wildlife & Wikki Warm Springs  
 - **Kajuru Castle** — Medieval hilltop architecture  
-- **Mambilla Plateau** — Nigeria’s highest peaks & tea fields  
+- **Mambilla Plateau** — Highlands, tea farms & waterfalls  
 
 Each destination includes:
 - Short & full descriptions
 - Image galleries
-- Key highlights
-- Geographic coordinates
-- Visitor appeal ratings
+- Highlights
+- Coordinates
+- Visitor ratings
 
 ---
 
 ### 🎉 Events & Festivals
-Cultural, artistic, sporting, and heritage events that define the Northern calendar.
+Cultural, artistic, sporting, and heritage events that shape Northern Nigeria’s calendar.
 
-Featured events include:
-- **Kano Durbar Festival** — 500-year-old royal horse procession  
-- **Argungu Fishing Festival** — Mass river fishing competition  
-- **Dambe Warriors League** — Ancient Hausa boxing, modernized  
-- **KABAFEST** — Kaduna Book & Arts Festival  
+Examples:
+- **Kano Durbar Festival**
+- **Argungu Fishing Festival**
+- **Dambe Warriors League**
+- **KABAFEST (Kaduna Book & Arts Festival)**
 
-Event entries include:
-- Categories (Culture, Sport, Art, Heritage)
-- Dates & locations
-- Highlight moments
-- Image galleries
-- Embedded video content
+Each event includes:
+- Date & location
+- Category
+- Galleries & videos
+- Cultural highlights
 
 ---
 
 ### 👑 People of Arewa
-Profiles of influential Northern Nigerians shaping business, culture, arts, technology, and entertainment.
+Profiles of influential Northern Nigerians shaping business, arts, culture, entertainment, and technology.
 
-Featured profiles:
-- **Aliko Dangote** — Titan of African industry  
-- **Ali Nuhu** — King of Kannywood  
-- **Rahama Sadau** — Global film icon  
-- **Maryam Bukar (Alhanislam)** — Poet & storyteller  
-- **Sabiqah Bello** — Youth leader & facilitator  
-- **Usman Click** — Architect of Visit Arewa  
+Categories include:
+- Business & Industry
+- Entertainment & Film
+- Music
+- Arts & Literature
+- Technology & Innovation
 
 Each profile includes:
+- Biography (short & long)
 - Origin & category
-- Short & full biographies
 - Achievements
 - Quotes
-- Social & web links
+- Social links
 
 ---
 
 ### 🍲 Cuisine & Dishes
-Northern Nigerian food as culture, memory, and identity.
+Food as memory, ritual, and identity.
 
-Featured dishes:
-- **Suya & Kilishi** — Street food ritual  
-- **Tuwo Shinkafa & Miyan Taushe** — Home comfort  
-- **Fura da Nono** — Fermented refreshment  
-- **Masa (Waina)** — Morning staple  
+Examples:
+- **Suya & Kilishi**
+- **Tuwo Shinkafa & Miyan Taushe**
+- **Fura da Nono**
+- **Masa (Waina)**
 
-Dish entries include:
-- Cultural descriptions & quotes
+Each dish includes:
+- Cultural description & quote
 - Ingredients
 - Calories & food stats
 - Embedded preparation videos
+
+---
+
+## 🗺️ State Coverage & Progress
+
+Visit Arewa is actively expanding across Northern Nigeria.
+
+**Currently featured:**
+- Abuja (FCT)
+- Kaduna
+- Bauchi
+- Taraba
+
+More states are added continuously as content is curated and verified.  
+State coverage expands through community contributions from people who know these places best. **Contribute your knowledge, photos, and stories to help document every corner of Northern Nigeria.**
+
+> Goal: Cover every Northern Nigerian state through community contributions—destinations, events, people, and cuisine.
+
 
 ---
 
@@ -126,31 +142,60 @@ Open http://localhost:3000 in your browser.
 
 ## 🤝 Contributing
 
-Visit Arewa is **community-driven**. Developers, designers, writers, historians, photographers, and cultural curators are welcome.
+Visit Arewa is **community-driven**.
 
-### Contribute Content
-All major content lives in `lib/`:
+We welcome:
+- Developers
+- Designers
+- Writers & historians
+- Photographers & videographers
+- Cultural researchers
 
-- `destinations` → Places & landmarks  
-- `events` → Festivals, sports, arts  
-- `people` → Influential Northern figures  
-- `dishes` → Food & culinary heritage  
+---
+
+## 📋 Data Contribution Guidelines
+
+All cultural data lives in the `/lib` directory.
+
+### Content Principles
+- Be **respectful**, **accurate**, and **culturally grounded**
+- Avoid stereotypes or shallow descriptions
+- Storytelling is encouraged—this is not Wikipedia
+
+### Images & Media
+- Use high-quality, properly credited images
+- Avoid watermarked or copyrighted material
+- Prefer original or permission-granted content
+
+### Writing Style
+- Clear, descriptive, and human
+- Avoid marketing fluff
+- Focus on cultural significance, not hype
+
+### Data Files
+- `destinations.ts` → Places & landmarks  
+- `events.ts` → Festivals, sports & arts  
+- `people.ts` → Influential figures  
+- `dishes.ts` → Cuisine & food culture  
 
 Example:
 ```ts
 {
-  slug: "mambilla-plateau",
-  name: "Mambilla",
-  location: "Taraba, Nigeria",
+  slug: "yankari-game-reserve",
+  name: "Yankari",
+  location: "Bauchi, Nigeria",
   rating: 5,
 }
 ```
 
-### Contribution Flow
+---
+
+## 🔁 Contribution Flow
+
 1. Fork the repository  
 2. Create a feature branch  
    ```bash
-   git checkout -b feature/add-new-destination
+   git checkout -b feature/add-new-content
    ```
 3. Commit your changes  
 4. Open a Pull Request  
@@ -165,6 +210,20 @@ Example:
 /lib         → Cultural data (destinations, events, people, dishes)
 /public      → Images & media assets
 ```
+
+---
+
+## 🙏 Credits & Acknowledgements
+
+Visit Arewa is built on collective memory and shared knowledge.
+
+Thanks to:
+- Local historians & cultural custodians
+- Photographers & filmmakers across the North
+- Writers, artists, and storytellers
+- Open-source contributors
+
+If your content is featured and needs attribution updates, please reach out.
 
 ---
 
