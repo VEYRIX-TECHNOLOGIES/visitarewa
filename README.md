@@ -1,4 +1,5 @@
 Markdown
+
 # Visit Arewa 🇳🇬✨
 
 ![Project Status](https://img.shields.io/badge/Status-Live-green)
@@ -10,11 +11,13 @@ Markdown
 🚀 **Live Demo:** [visitarewa.com](https://visitarewa.com)
 
 ## 🎯 The Mission
-The internet lacks a centralized, high-quality platform for Northern Nigerian tourism and culture. Most searches yield empty results. 
+
+The internet lacks a centralized, high-quality platform for Northern Nigerian tourism and culture. Most searches yield empty results.
 
 **We decided to fix that.** This project is maintained by **Veyrix Technologies**, but it belongs to the community. We are archiving our stories, one commit at a time.
 
 ## 🛠️ Tech Stack
+
 - **Framework:** [Next.js 15](https://nextjs.org/) (App Router)
 - **Styling:** Tailwind CSS
 - **Animations:** Framer Motion
@@ -29,11 +32,14 @@ Want to run this locally? Follow these steps:
    ```bash
    git clone [https://github.com/Veyrix-Technologies/visitarewa.git](https://github.com/Veyrix-Technologies/visitarewa.git)
    cd visitarewa
-Install dependencies
+   Install dependencies
+   ```
 
 Bash
 npm install
+
 # or
+
 yarn install
 Run the development server
 
@@ -45,22 +51,21 @@ Open http://localhost:3000 in your browser.
 We are looking for developers, designers, and content curators. Here is how you can help:
 
 1. Add an Event or Festival 📅
-Go to lib/data.ts and add a new object to the events array:
+   Go to lib/data.ts and add a new object to the events array:
 
 JavaScript
 {
-  id: 4,
-  slug: "hawant-sallah",
-  name: "Hawan Sallah",
-  date: "Eid al-Fitr",
-  location: "Katsina",
-  // ...
-}
-2. Add a Local Dish 🍲
+id: 4,
+slug: "hawant-sallah",
+name: "Hawan Sallah",
+date: "Eid al-Fitr",
+location: "Katsina",
+// ...
+} 2. Add a Local Dish 🍲
 Go to lib/data.ts and update the food section with high-quality images and descriptions.
 
 3. Fix Bugs & Improve UI 🐛
-Found a layout shift? Want to improve the mobile menu?
+   Found a layout shift? Want to improve the mobile menu?
 
 Fork the repo.
 
@@ -71,10 +76,10 @@ Commit your changes.
 Open a Pull Request.
 
 📂 Project Structure
-/app          # Next.js App Router pages
-/components   # Reusable UI components (Navbar, Footer, EventCard)
-/lib          # Static data files (events, food, destinations)
-/public       # Images and assets
+/app # Next.js App Router pages
+/components # Reusable UI components (Navbar, Footer, EventCard)
+/lib # Static data files (events, food, destinations)
+/public # Images and assets
 📜 License
 This project is open-source under the MIT License. See the LICENSE file for details.
 
